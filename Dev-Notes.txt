@@ -30,3 +30,5 @@ succusfully connected to amazon s3!!!!
 creating backup of boot
 
 cant git commit boot because of aws credentials!!!
+
+added git to raspberry pi and pulled down project
