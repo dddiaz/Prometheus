@@ -5,6 +5,9 @@
 #Note you must add the cron job call in /etc/cron.d
 
 #testing python cron job
+import datetime
 f = open('/home/pi/cron.txt','a')
-f.write('test\n')
+f.write('test \n')
+f.write(datetime.datetime.now().strftime("%B %d, %Y"))
+f.write('\n')
 f.close()

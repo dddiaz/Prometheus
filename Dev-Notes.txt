@@ -32,3 +32,5 @@ creating backup of boot
 cant git commit boot because of aws credentials!!!
 
 added git to raspberry pi and pulled down project
+
+sudo chmod +x /home/pi/Prometheus/prometheus.py
