@@ -64,3 +64,5 @@ Recovery-Backup/riscos-boot.bin
 credentials.csv.txt
 
 pi-boot-backup-mar-24-1015.zip
+
+*.zip
