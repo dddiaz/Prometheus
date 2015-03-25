@@ -1,0 +1,32 @@
+Dev Notes
+
+To mount usb drive: http://www.raspberrypi-spy.co.uk/2014/05/how-to-mount-a-usb-flash-disk-on-the-raspberry-pi/
+http://www.cpmspectrepi.webspace.virginmedia.com/raspberry_pi/MoinMoinExport/MultipleUsbSticks.html
+Note file may need to change for hd implementation
+
+Drive Mounted to /mnt/usb
+
+IP ADDR:
+ssh pi@192.168.0.26
+
+mar 24: got the usb to mount!
+
+pip can only be called with pip-3.2
+
+awscli docs
+
+awsconfigure
+
+prometheus-bucket-raspberry-pi
+
+high level aws commands
+http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html
+
+aws s3 ls s3://prometheus-bucket-raspberry-pi
+aws s3 ls s3://prometheus-bucket-raspberry-pi/test/
+
+succusfully connected to amazon s3!!!!
+
+creating backup of boot
+
+cant git commit boot because of aws credentials!!!
