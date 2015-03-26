@@ -11,6 +11,7 @@
 #			-google cli????
 #			-run aws sync
 
+import datetime
 
 class amazonS3Sync:
 	"""
@@ -43,7 +44,7 @@ class amazonS3Sync:
 		self.syncToS3()
 
 if '__name__' == '__main__':
-	import datetime
+
 	backup = amazonS3Sync()
 	backup.execute()
 
