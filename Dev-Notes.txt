@@ -37,3 +37,6 @@ sudo chmod +x /home/pi/Prometheus/prometheus.py
 
 calling commands from python
 http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+
+need git commit -m ""
+git push 
