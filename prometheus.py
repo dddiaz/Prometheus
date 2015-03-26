@@ -13,6 +13,8 @@
 
 import datetime
 
+print("Test2")
+
 class amazonS3Sync:
 	"""
 		Implements a class to sync with amazon amazonS3
@@ -21,7 +23,7 @@ class amazonS3Sync:
 		"""
 			__init__
 		"""
-		self.complete = false
+		self.complete = False
 
 	def printSyncStart(self):
 		"""
@@ -43,8 +45,8 @@ class amazonS3Sync:
 		self.printSyncStart()
 		self.syncToS3()
 
-if '__name__' == '__main__':
-
+if __name__ == '__main__':
+	print('Test')
 	backup = amazonS3Sync()
 	backup.execute()
 
