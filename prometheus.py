@@ -12,8 +12,7 @@
 #			-run aws sync
 
 import datetime
-
-print("Test2")
+import subprocess
 
 class amazonS3Sync:
 	"""
@@ -38,15 +37,20 @@ class amazonS3Sync:
 	def syncToS3(self):
 		"""
 			Sync to aws s3 with awscli
+			subprocess.call will wait for finish which we should do
 		"""
-		z=1
+		#return_code = subprocess.call("echo Hello World", shell=True)
+		return_code = subprocess.call("aws s3 ls s3://prometheus-bucket-raspberry-pi",shell=True)
+		return_code1 = subprocess.call("aws s3 sync /mnt/usb s3://prometheus-bucket-raspberry-pi",shell=True)
+		return_code2 = subprocess.call("aws s3 ls s3://prometheus-bucket-raspberry-pi",shell=True)
+		print("Return Code", return_code,return_code1,return_code2)
 
 	def execute(self):
 		self.printSyncStart()
 		self.syncToS3()
 
 if __name__ == '__main__':
-	print('Test')
+	print("Running Sync")
 	backup = amazonS3Sync()
 	backup.execute()
 
