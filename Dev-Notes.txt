@@ -39,4 +39,8 @@ calling commands from python
 http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
 
 need git commit -m ""
+
 git push 
+
+
+look like when uploadeding it sees the .Trashes folder on the usb which is a problem
