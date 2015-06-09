@@ -19,3 +19,27 @@ Dev Notes:
 #			-test awscli installed/setup
 #			-google cli????
 #			-run aws sync
+
+#Steps
+# 1 - pip install awscli
+# 2 - run "aws configure" frm the command line
+# 3 - enter the crendentials retireved from you aws iam profile
+#       -see http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
+#       - make sure user has these credentials:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::your-s3-bucket",
+                "arn:aws:s3:::your-s3-bucket/*"
+            ]
+        }
+    ]
+}
+
+
+TODO:
+potentially add shortcut to auto install python 3
