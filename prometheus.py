@@ -72,7 +72,7 @@ class aws_sync:
     def __init__(self):
         self.log = logger()
         #self.source_folder = "/mnt/usb"
-        self.source_folder = r'/Users/danieldiaz/Library/Mobile Documents/com~apple~CloudDocs/Dev/Work/Prometheus/test_folder'
+        self.source_folder = r'/Users/danieldiaz/Library/Mobile\ Documents/com\~apple\~CloudDocs/Dev/Work/Prometheus/test_folder'
         self.dest_folder = "s3://prometheus-bucket-raspberry-pi"
 
     def sync_start(self):
@@ -81,6 +81,10 @@ class aws_sync:
         return
 
     def sync(self):
+        command = "aws s3 ls " + self.dest_folder
+        return_code = subprocess.call(command,shell=True)
+        command = "aws s3 sync " + self.source_folder + " " + self.dest_folder
+        return_code = subprocess.call(command,shell=True)
         command = "aws s3 ls " + self.dest_folder
         return_code = subprocess.call(command,shell=True)
         #return_code = subprocess.call("aws s3 ls s3://prometheus-bucket-raspberry-pi",shell=True)
